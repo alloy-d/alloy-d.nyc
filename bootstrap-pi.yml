@@ -1,0 +1,41 @@
+---
+- name: pi bootstrapper
+
+  hosts: pis
+  remote_user: pi
+  sudo: yes
+
+  tasks:
+    - name: expand root filesystem
+      shell: /usr/bin/raspi-config --expand-rootfs
+
+    - name: add the wheel group
+      group: |
+        name=wheel
+        state=present
+        system=yes
+        
+    - name: allow wheel to use sudo
+      lineinfile: |
+        dest=/etc/sudoers
+        state=present
+        regexp='^%wheel ALL\='
+        line='%wheel ALL=(ALL) NOPASSWD:ALL'
+        validate='visudo -cf %s'
+
+    - name: set up a user account for Adam
+      user: |
+        name=adam
+        shell=/bin/bash
+        groups=adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,netdev,input,spi,gpio,wheel
+
+    - name: add an authorized key to adam
+      authorized_key: |
+        user=adam
+        key="{{ lookup('file', '/Users/adam/.ssh/id_dsa.pub') }}"
+      
+    - name: set the hostname
+      hostname: name="{{ inventory_hostname }}"
+
+    - name: reboot
+      command: /sbin/shutdown -r now

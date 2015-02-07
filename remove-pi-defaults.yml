@@ -1,0 +1,17 @@
+---
+- name: pi defaults remover
+
+  hosts: pis
+  remote_user: adam
+  sudo: yes
+
+  tasks:
+    - name: remove pi user
+      user: |
+        name=pi
+        state=absent
+
+    - name: remove pi group
+      user: |
+        name=pi
+        state=absent
