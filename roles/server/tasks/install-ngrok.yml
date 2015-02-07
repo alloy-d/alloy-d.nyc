@@ -1,0 +1,18 @@
+---
+
+- name: check if ngrok is installed
+  stat: path=/usr/local/bin/ngrok
+  register: ngrok
+
+- name: download latest ngrok archive
+  when: not ngrok.stat.exists
+  get_url: |
+    url=https://api.equinox.io/1/Applications/ap_pJSFC5wQYkAyI0FIVwKYs9h1hW/Updates/Asset/ngrok.zip?os=linux&arch=arm&channel=stable
+    dest=/tmp/ngrok.zip
+
+- name: extract ngrok to /usr/local/bin
+  when: not ngrok.stat.exists
+  unarchive: |
+    src=/tmp/ngrok.zip
+    dest=/usr/local/bin
+    copy=no

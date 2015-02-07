@@ -1,0 +1,9 @@
+---
+
+- name: Ansible Playbook for configuring things
+
+  hosts: pis
+  roles:
+    - server
+  remote_user: adam
+  sudo: yes
