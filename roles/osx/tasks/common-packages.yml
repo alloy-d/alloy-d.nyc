@@ -1,0 +1,25 @@
+---
+- name: brew update
+  homebrew: update_homebrew=yes
+
+- name: brew tap common taps
+  homebrew_tap: name={{ item }} state=present
+  with_items: common.brew.taps
+
+- name: brew upgrade
+  homebrew: update_homebrew=yes upgrade_all=yes
+
+- name: brew install common packages
+  homebrew: name={{ item }} state=upgraded
+  with_items: common.brew.packages
+
+- name: brew install custom packages
+  homebrew: |
+    name={{ item.name }}
+    install_options={{ item.options|join(",") }}
+    state=upgraded
+  with_items: common.brew.custom_packages
+
+- name: brew install common casks
+  homebrew_cask: name={{ item }} state=installed
+  with_items: common.brew.casks

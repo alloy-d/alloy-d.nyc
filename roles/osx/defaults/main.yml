@@ -1,0 +1,20 @@
+---
+common:
+  brew:
+    taps:
+      - caskroom/cask
+    packages:
+      - ansible
+      - brew-cask
+      - fish
+      - tmux
+    custom_packages:
+      - name: emacs
+        options:
+          - cocoa
+    casks:
+      - 1password
+      - alfred
+      - dash
+      - dropbox
+      - karabiner
