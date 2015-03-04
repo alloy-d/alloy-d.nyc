@@ -38,3 +38,5 @@ osx:
         dest: ~/.gitconfig
       - src: git/gitignore
         dest: ~/.gitignore
+      - src: pry/pryrc
+        dest: ~/.pryrc
