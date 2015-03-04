@@ -1,12 +1,16 @@
 ---
-common:
+osx:
   brew:
     taps:
       - caskroom/cask
     packages:
       - ansible
+      - autojump
       - brew-cask
+      - cowsay
       - fish
+      - fortune
+      - reattach-to-user-namespace
       - tmux
     custom_packages:
       - name: emacs
@@ -17,4 +21,19 @@ common:
       - alfred
       - dash
       - dropbox
+      - firefox
+      - google-chrome
       - karabiner
+      - noizio
+      - spotify
+
+  dotfiles:
+    links:
+      - src: tmux/tmux.conf
+        dest: ~/.tmux.conf
+      - src: fish
+        dest: ~/.config/fish
+      - src: git/gitconfig
+        dest: ~/.gitconfig
+      - src: git/gitignore
+        dest: ~/.gitignore

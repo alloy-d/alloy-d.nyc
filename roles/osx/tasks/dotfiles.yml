@@ -1,0 +1,17 @@
+---
+- name: configure emacs
+  git: |
+    repo=https://gist.github.com/e90e8e8b1437586fba3f.git
+    dest=~/.emacs.d
+
+- name: update dotfiles
+  git: |
+    repo=https://github.com/alloy-d/dotfiles.git
+    dest=~/.dotfiles.d
+
+- name: symlink dotfiles
+  file: |
+    src=~/.dotfiles.d/{{ item.src }}
+    dest={{ item.dest }}
+    state=link
+  with_items: osx.dotfiles.links
