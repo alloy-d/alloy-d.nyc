@@ -1,8 +1,25 @@
 ---
-- name: configure emacs
+- name: clone emacs configuration
   git: |
     repo=https://gist.github.com/e90e8e8b1437586fba3f.git
     dest=~/.emacs.d
+
+- name: clone vim configuration
+  git: |
+    repo=https://github.com/alloy-d/vim-config.git
+    dest=~/.vim
+    recursive=yes
+
+- name: link vim configs
+  file: |
+    src=~/.vim/{{ item.src }}
+    dest={{ item.dest }}
+    state=link
+  with_items:
+    - src: vimrc
+      dest: ~/.vimrc
+    - src: gvimrc
+      dest: ~/.gvimrc
 
 - name: update dotfiles
   git: |
