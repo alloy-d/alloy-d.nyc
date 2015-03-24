@@ -24,6 +24,7 @@ osx:
       - firefox
       - google-chrome
       - karabiner
+      - marked
       - noizio
       - spotify
       - textexpander
