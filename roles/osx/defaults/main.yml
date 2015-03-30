@@ -11,6 +11,7 @@ osx:
       - fish
       - fortune
       - reattach-to-user-namespace
+      - terminal-notifier
       - tmux
     custom_packages:
       - name: emacs
