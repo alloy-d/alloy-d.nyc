@@ -3,6 +3,7 @@ osx:
   brew:
     taps:
       - caskroom/cask
+      - caskroom/homebrew-versions
     packages:
       - ansible
       - autojump
@@ -29,6 +30,7 @@ osx:
       - noizio
       - skitch
       - spotify
+      - sublime-text3
       - textexpander
 
   dotfiles:
