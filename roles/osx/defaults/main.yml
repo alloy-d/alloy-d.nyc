@@ -3,7 +3,7 @@ osx:
   brew:
     taps:
       - caskroom/cask
-      - caskroom/homebrew-versions
+      - caskroom/versions
     packages:
       - ansible
       - autojump
