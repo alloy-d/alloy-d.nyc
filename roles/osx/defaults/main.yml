@@ -23,6 +23,7 @@ osx:
       - alfred
       - dash
       - dropbox
+      - evernote
       - firefox
       - google-chrome
       - karabiner
