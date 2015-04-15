@@ -1,0 +1,47 @@
+---
+osx:
+  brew:
+    taps:
+      - caskroom/cask
+      - caskroom/versions
+    packages:
+      - ansible
+      - autojump
+      - brew-cask
+      - cowsay
+      - fish
+      - fortune
+      - reattach-to-user-namespace
+      - terminal-notifier
+      - tmux
+    custom_packages:
+      - name: emacs
+        options:
+          - cocoa
+    casks:
+      - 1password
+      - alfred
+      - dash
+      - dropbox
+      - firefox
+      - google-chrome
+      - karabiner
+      - marked
+      - noizio
+      - skitch
+      - spotify
+      - sublime-text3
+      - textexpander
+
+  dotfiles:
+    links:
+      - src: tmux/tmux.conf
+        dest: ~/.tmux.conf
+      - src: fish
+        dest: ~/.config/fish
+      - src: git/gitconfig
+        dest: ~/.gitconfig
+      - src: git/gitignore
+        dest: ~/.gitignore
+      - src: pry/pryrc
+        dest: ~/.pryrc

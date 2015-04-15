@@ -1,0 +1,11 @@
+---
+- name: "create ~/.cows"
+  file:
+    path: ~/.cows
+    state: directory
+
+- name: "make sheep the default cow in ~/.cows"
+  file:
+    dest: ~/.cows/default.cow
+    src: /usr/local/share/cows/sheep.cow
+    state: link
