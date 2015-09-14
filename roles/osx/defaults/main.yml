@@ -33,6 +33,7 @@ osx:
       - spotify
       - sublime-text3
       - textexpander
+      - vlc
 
   dotfiles:
     links:
