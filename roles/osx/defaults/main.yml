@@ -30,6 +30,7 @@ osx:
       - marked
       - noizio
       - skitch
+      - slack
       - spotify
       - sublime-text3
       - textexpander
