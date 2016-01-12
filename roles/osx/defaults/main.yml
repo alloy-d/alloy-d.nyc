@@ -11,6 +11,7 @@ osx:
       - cowsay
       - fish
       - fortune
+      - gpg2
       - reattach-to-user-namespace
       - terminal-notifier
       - tmux
