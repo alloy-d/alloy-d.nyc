@@ -29,6 +29,14 @@
         line='%wheel ALL=(ALL) NOPASSWD:ALL'
         validate='visudo -cf %s'
 
+    - name: configure sudo to retain the SSH_AUTH_SOCK
+      lineinfile: |
+        dest=/etc/sudoers
+        state=present
+        regexp='SSH_AUTH_SOCK'
+        line='Defaults env_keep += "SSH_AUTH_SOCK"'
+        validate='visudo -cf %s'
+
     - name: set up a user account for Adam
       user: |
         name=adam
