@@ -2,11 +2,17 @@
 - name: pi bootstrapper
 
   hosts: pis
-  remote_user: pi
-  sudo: yes
+  # FIXME: this is `pi` for a Raspbian host.
+  # `alarm` is for Arch Linux ARM.
+  remote_user: alarm
+  become: yes
 
   tasks:
+    # Root FS might need expanding if we're dealing with an
+    # image that was written to an SD card.  Setting up Arch Linux
+    # doesn't work that way anymore, so this is just Raspbian.
     - name: expand root filesystem
+      when: ansible_os_family == "Debian"
       shell: /usr/bin/raspi-config --expand-rootfs
 
     - name: add the wheel group
@@ -27,7 +33,7 @@
       user: |
         name=adam
         shell=/bin/bash
-        groups=adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,netdev,input,spi,gpio,wheel
+        groups={{ (ansible_os_family == "Debian") | ternary("adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,netdev,input,spi,gpio,wheel", "wheel") }}
 
     - name: add an authorized key to adam
       authorized_key: |
