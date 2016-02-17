@@ -46,8 +46,8 @@
     - name: add an authorized key to adam
       authorized_key: |
         user=adam
-        key="{{ lookup('file', '/Users/adam/.ssh/id_dsa.pub') }}"
-      
+        key="{{ lookup('file', '/Users/adam/.ssh/id_ed25519.pub') }}"
+
     - name: set the hostname
       hostname: name="{{ inventory_hostname }}"
 
