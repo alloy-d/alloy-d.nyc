@@ -26,6 +26,11 @@
     repo=https://github.com/alloy-d/dotfiles.git
     dest=~/.dotfiles.d
 
+- name: ensure ~/.config existence
+  file: |
+    dest=~/.config
+    state=directory
+
 - name: symlink dotfiles
   file: |
     src=~/.dotfiles.d/{{ item.src }}

@@ -11,6 +11,7 @@ osx:
       - cowsay
       - fish
       - fortune
+      - gpg2
       - reattach-to-user-namespace
       - terminal-notifier
       - tmux
@@ -30,9 +31,11 @@ osx:
       - marked
       - noizio
       - skitch
+      - slack
       - spotify
       - sublime-text3
       - textexpander
+      - vlc
 
   dotfiles:
     links:

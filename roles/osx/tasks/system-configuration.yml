@@ -1,0 +1,5 @@
+- name: enable fish as a login shell
+  lineinfile:
+    dest: /etc/shells
+    line: /usr/local/bin/fish
+    state: present
