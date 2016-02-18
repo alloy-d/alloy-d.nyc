@@ -1,0 +1,28 @@
+---
+- name: install base packages
+  pacman:
+    name: '{{ item }}'
+    state: present
+  with_items:
+    - avahi
+    - nss-mdns
+  register: packages
+
+- name: restart dbus if avahi was installed
+  service:
+    name: dbus
+    state: restarted
+  when: "{{ packages|changed }}"
+
+- name: enable .local hostname resolution
+  lineinfile:
+    dest: "/etc/nsswitch.conf"
+    line: "hosts: files mdns_minimal [NOTFOUND=return] dns myhostname"
+    state: present
+    regexp: "^hosts:"
+
+- name: enable and start avahi-daemon
+  service:
+    name: avahi-daemon
+    enabled: yes
+    state: started

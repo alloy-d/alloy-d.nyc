@@ -1,9 +1,9 @@
 ---
-
 - name: Ansible Playbook for configuring things
 
   hosts: pis
   roles:
-    - server
+    - name: home-arch
+      when: ansible_os_family == "Archlinux"
   remote_user: adam
-  sudo: yes
+  become: yes
