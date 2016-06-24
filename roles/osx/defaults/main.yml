@@ -5,6 +5,7 @@ osx:
       - caskroom/cask
       - caskroom/versions
     packages:
+      - ack
       - ansible
       - autojump
       - brew-cask
@@ -12,7 +13,9 @@ osx:
       - fish
       - fortune
       - gpg2
+      - rbenv
       - reattach-to-user-namespace
+      - ruby-build
       - terminal-notifier
       - tmux
     custom_packages:
@@ -24,17 +27,18 @@ osx:
       - alfred
       - dash
       - dropbox
+      - dockertoolbox
       - evernote
       - firefox
       - google-chrome
       - karabiner
       - marked
-      - noizio
       - skitch
       - slack
       - spotify
-      - sublime-text3
       - textexpander
+      - vagrant
+      - virtualbox
       - vlc
 
   dotfiles:
