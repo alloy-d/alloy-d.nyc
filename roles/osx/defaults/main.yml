@@ -1,14 +1,10 @@
 ---
 osx:
   brew:
-    taps:
-      - caskroom/cask
-      - caskroom/versions
     packages:
       - ack
       - ansible
       - autojump
-      - brew-cask
       - cowsay
       - fish
       - fortune
@@ -18,22 +14,16 @@ osx:
       - ruby-build
       - terminal-notifier
       - tmux
-    custom_packages:
-      - name: emacs
-        options:
-          - cocoa
+
     casks:
       - 1password
       - alfred
       - dash
-      - dropbox
-      - dockertoolbox
-      - evernote
+      - docker-toolbox
       - firefox
       - google-chrome
-      - karabiner
+      - karabiner-elements
       - marked
-      - skitch
       - slack
       - spotify
       - textexpander
