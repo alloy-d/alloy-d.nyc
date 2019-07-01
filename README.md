@@ -44,4 +44,7 @@ https://textexpander.com/textexpander-standalone-apps/
 Here are the ones I typically want:
 
 - Bear
+- Keynote
+- MindNode
+- Pages
 - Things
