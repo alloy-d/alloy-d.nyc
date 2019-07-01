@@ -29,7 +29,6 @@ osx:
       - marked
       - slack
       - spotify
-      - textexpander
       - vagrant
       - virtualbox
       - vlc
