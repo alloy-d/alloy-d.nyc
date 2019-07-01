@@ -20,3 +20,11 @@ $ ansible-playbook -K osx.yml
 For Reasons™, Dropbox tends to be one of the first things I set up.
 
 #### Transferring SSH and GPG keys.
+
+#### Setting my login shell
+
+In enables fish as a login shell, but doesn't set it as mine.  You want:
+
+```sh
+$ chsh -s /usr/local/bin/fish
+```
