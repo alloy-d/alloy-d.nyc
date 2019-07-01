@@ -1,0 +1,13 @@
+---
+- name: "create gnupg directory"
+  file:
+    mode: 0700
+    state: directory
+    path: ~/.gnupg
+
+- name: "configure pinentry program for GPG"
+  lineinfile:
+    path: ~/.gnupg/gpg-agent.conf
+    regexp: '^pinentry-program '
+    state: present
+    line: 'pinentry-program /usr/local/bin/pinentry-mac'

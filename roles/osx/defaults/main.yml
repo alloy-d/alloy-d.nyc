@@ -13,6 +13,7 @@ osx:
       - reattach-to-user-namespace
       - ruby-build
       - macvim
+      - pinentry-mac
       - terminal-notifier
       - tmux
 
