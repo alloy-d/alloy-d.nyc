@@ -12,6 +12,7 @@ osx:
       - rbenv
       - reattach-to-user-namespace
       - ruby-build
+      - macvim
       - terminal-notifier
       - tmux
 
@@ -20,6 +21,7 @@ osx:
       - alfred
       - dash
       - docker-toolbox
+      - fantastical
       - firefox
       - google-chrome
       - karabiner-elements
