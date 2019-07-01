@@ -48,3 +48,4 @@ Here are the ones I typically want:
 - MindNode
 - Pages
 - Things
+- Trello
