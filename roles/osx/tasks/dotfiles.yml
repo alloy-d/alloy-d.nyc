@@ -6,7 +6,7 @@
 
 - name: clone vim configuration
   git:
-    repo: https://github.com/alloy-d/vim-config.git
+    repo: git@github.com:alloy-d/vim-config.git
     dest: ~/.vim
     recursive: yes
 
@@ -23,7 +23,7 @@
 
 - name: update dotfiles
   git:
-    repo: https://github.com/alloy-d/dotfiles.git
+    repo: git@github.com:alloy-d/dotfiles.git
     dest: ~/.dotfiles.d
 
 - name: ensure ~/.config existence
