@@ -1,14 +1,23 @@
 ---
 osx:
   brew:
+    taps:
+      - homebrew/cask-fonts
+
     packages:
       - ack
       - ansible
       - autojump
+      - awscli
       - cowsay
+      - elixir
       - fish
       - fortune
       - gpg2
+      - jq
+      - kops
+      - kubectl
+      - nvm
       - rbenv
       - reattach-to-user-namespace
       - ruby-build
@@ -16,17 +25,22 @@ osx:
       - pinentry-mac
       - terminal-notifier
       - tmux
+      - watch
 
     casks:
       - 1password
       - alfred
+      - aws-vault
       - dash
       - docker-toolbox
       - fantastical
       - firefox
+      - font-meslo-for-powerline
+      - front
       - google-chrome
       - karabiner-elements
       - marked
+      - minikube
       - slack
       - spotify
       - vagrant

@@ -1,4 +1,10 @@
 ---
+- name: brew tap casks
+  homebrew_tap:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ osx.brew.taps | flatten(levels=1) }}"
+
 - name: brew update
   homebrew: update_homebrew=yes
 
