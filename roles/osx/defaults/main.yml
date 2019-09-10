@@ -20,15 +20,18 @@ osx:
       - nvm
       - rbenv
       - reattach-to-user-namespace
+      - ripgrep
       - ruby-build
       - macvim
       - pinentry-mac
       - terminal-notifier
+      - terraform
       - tmux
       - watch
 
     casks:
       - 1password
+      - 1password-cli
       - alfred
       - aws-vault
       - dash
@@ -41,8 +44,11 @@ osx:
       - karabiner-elements
       - marked
       - minikube
+      - postman
+      - robo-3t
       - slack
       - spotify
+      - transmission
       - vagrant
       - virtualbox
       - vlc
@@ -59,3 +65,5 @@ osx:
         dest: ~/.gitignore
       - src: pry/pryrc
         dest: ~/.pryrc
+      - src: ripgrep/ripgreprc
+        dest: ~/.ripgreprc
