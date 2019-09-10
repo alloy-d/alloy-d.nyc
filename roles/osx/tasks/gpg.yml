@@ -8,7 +8,7 @@
 - name: "create ~/.gnupg/gpg-agent.conf"
   file:
     mode: 0600
-    state: file
+    state: touch
     path: ~/.gnupg/gpg-agent.conf
 
 - name: "configure pinentry program for GPG"
