@@ -27,12 +27,6 @@ $ chsh -s /usr/local/bin/fish
 
 #### Manually installing apps
 
-##### Dropbox
-
-For Reasons™, Dropbox tends to be one of the first things I set up.
-
-##### 1Password 6
-
 ##### TextExpander 5
 
 The Cask only has the latest subscription version, not the old
