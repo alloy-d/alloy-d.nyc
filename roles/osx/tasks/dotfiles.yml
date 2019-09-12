@@ -10,6 +10,11 @@
     dest: ~/.vim
     recursive: yes
 
+- name: create temporary directory for vim
+  file:
+    dest: ~/.vim-tmp
+    state: directory
+
 - name: link vim configs
   file:
     src: "~/.vim/{{ item.src }}"
