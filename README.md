@@ -43,7 +43,13 @@ More or less the basic setup.  License key is in 1Password.
 
 Hide the hat.
 
-#### Configuring Karabiner-Elements
+#### Configuring keyboard settings
+
+##### macOS preferences
+
+Set repeat rate (max) and delay (one above minimum).
+
+##### Karabiner-Elements
 
 Simple:
 - Remap right option to right control.
