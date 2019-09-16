@@ -39,6 +39,7 @@ osx:
       - docker
       - fantastical
       - firefox
+      - font-fira-code
       - font-meslo-for-powerline
       - front
       - google-chrome
