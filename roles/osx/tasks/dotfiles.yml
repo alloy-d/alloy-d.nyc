@@ -30,6 +30,7 @@
   git:
     repo: git@github.com:alloy-d/dotfiles.git
     dest: ~/.dotfiles.d
+    recursive: yes
 
 - name: ensure ~/.config existence
   file:
