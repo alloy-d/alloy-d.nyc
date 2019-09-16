@@ -24,6 +24,7 @@ osx:
       - ruby-build
       - macvim
       - pinentry-mac
+      - postgresql
       - terminal-notifier
       - terraform
       - tmux
