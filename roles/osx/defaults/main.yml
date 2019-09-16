@@ -27,6 +27,7 @@ osx:
       - terminal-notifier
       - terraform
       - tmux
+      - vault
       - watch
 
     casks:
@@ -35,7 +36,7 @@ osx:
       - alfred
       - aws-vault
       - dash
-      - docker-toolbox
+      - docker
       - fantastical
       - firefox
       - font-meslo-for-powerline
