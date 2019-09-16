@@ -65,6 +65,8 @@ osx:
         dest: ~/.gitconfig
       - src: git/gitignore
         dest: ~/.gitignore
+      - src: kitty
+        dest: ~/.config/kitty
       - src: pry/pryrc
         dest: ~/.pryrc
       - src: ripgrep/ripgreprc
