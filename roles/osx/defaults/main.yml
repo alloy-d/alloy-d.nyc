@@ -27,6 +27,7 @@ osx:
       - postgresql
       - terminal-notifier
       - terraform
+      - tflint
       - tmux
       - vault
       - watch
