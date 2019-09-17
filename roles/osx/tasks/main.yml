@@ -1,6 +1,7 @@
 ---
 - include: common-packages.yml
 - include: dotfiles.yml
+- include: gpg.yml
 - include: cows.yml
 
 - include: system-configuration.yml

@@ -2,39 +2,60 @@
 osx:
   brew:
     taps:
-      - caskroom/cask
-      - caskroom/versions
+      - homebrew/cask-fonts
+
     packages:
+      - ack
       - ansible
       - autojump
-      - brew-cask
+      - awscli
       - cowsay
+      - elixir
       - fish
       - fortune
       - gpg2
+      - jq
+      - kops
+      - kubectl
+      - nvm
+      - rbenv
       - reattach-to-user-namespace
+      - ripgrep
+      - ruby-build
+      - macvim
+      - pinentry-mac
+      - postgresql
       - terminal-notifier
+      - terraform
+      - tflint
       - tmux
-    custom_packages:
-      - name: emacs
-        options:
-          - cocoa
+      - vault
+      - watch
+
     casks:
       - 1password
+      - 1password-cli
       - alfred
+      - aws-vault
       - dash
-      - dropbox
-      - evernote
+      - docker
+      - fantastical
       - firefox
+      - font-fira-code
+      - font-meslo-for-powerline
+      - font-meslo-lg
+      - front
       - google-chrome
-      - karabiner
+      - karabiner-elements
       - marked
-      - noizio
-      - skitch
+      - minikube
+      - postman
+      - robo-3t
       - slack
       - spotify
-      - sublime-text3
-      - textexpander
+      - transmission
+      - vagrant
+      - virtualbox
       - vlc
 
   dotfiles:
@@ -47,5 +68,9 @@ osx:
         dest: ~/.gitconfig
       - src: git/gitignore
         dest: ~/.gitignore
+      - src: kitty
+        dest: ~/.config/kitty
       - src: pry/pryrc
         dest: ~/.pryrc
+      - src: ripgrep/ripgreprc
+        dest: ~/.ripgreprc
