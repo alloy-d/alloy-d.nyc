@@ -23,8 +23,6 @@
   with_items:
     - src: vimrc
       dest: ~/.vimrc
-    - src: gvimrc
-      dest: ~/.gvimrc
 
 - name: update dotfiles
   git:
