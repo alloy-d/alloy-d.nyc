@@ -62,6 +62,8 @@ osx:
     links:
       - src: tmux/tmux.conf
         dest: ~/.tmux.conf
+      - src: editorconfig
+        dest: ~/.editorconfig
       - src: fish
         dest: ~/.config/fish
       - src: git/gitconfig
