@@ -17,6 +17,7 @@ osx:
       - jq
       - kops
       - kubectl
+      - neovim
       - nvm
       - rbenv
       - reattach-to-user-namespace
@@ -47,6 +48,7 @@ osx:
       - front
       - google-chrome
       - karabiner-elements
+      - kitty
       - marked
       - minikube
       - postman
