@@ -41,6 +41,8 @@ $ chsh -s /usr/local/bin/fish
 
 More or less the basic setup.  License key is in 1Password.
 
+Enable clipboard history.
+
 Hide the hat.
 
 #### Configuring keyboard settings
