@@ -40,4 +40,4 @@
     src: "~/.dotfiles.d/{{ item.src }}"
     dest: "{{ item.dest }}"
     state: link
-  loop: "{{ osx.dotfiles.links|flatten(levels=1) }}"
+  loop: "{{ macos.dotfiles.links|flatten(levels=1) }}"

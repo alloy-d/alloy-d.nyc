@@ -3,7 +3,7 @@
   homebrew_tap:
     name: "{{ item }}"
     state: present
-  loop: "{{ osx.brew.taps | flatten(levels=1) }}"
+  loop: "{{ macos.brew.taps | flatten(levels=1) }}"
 
 - name: brew update
   homebrew: update_homebrew=yes
@@ -12,8 +12,8 @@
   homebrew: update_homebrew=yes upgrade_all=yes
 
 - name: brew install common packages
-  homebrew: name={{ osx.brew.packages }} state=upgraded
+  homebrew: name={{ macos.brew.packages }} state=upgraded
 
 - name: brew install common casks
   homebrew_cask: name={{ item }} state=installed
-  loop: "{{ osx.brew.casks | flatten(levels=1) }}"
+  loop: "{{ macos.brew.casks | flatten(levels=1) }}"

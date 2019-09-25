@@ -1,5 +1,5 @@
 ---
-osx:
+macos:
   brew:
     taps:
       - homebrew/cask-fonts
@@ -72,6 +72,8 @@ osx:
         dest: ~/.gitconfig
       - src: git/gitignore
         dest: ~/.gitignore
+      - src: nvim
+        dest: ~/.config/nvim
       - src: kitty
         dest: ~/.config/kitty
       - src: pry/pryrc

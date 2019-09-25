@@ -11,4 +11,4 @@ if ! which ansible-playbook; then
 	brew install ansible
 fi
 
-ansible-playbook -K osx.yml
+ansible-playbook -K macos.yml
