@@ -17,6 +17,7 @@ macos:
       - jq
       - kops
       - kubectl
+      - lynx
       - neovim
       - nvm
       - rbenv
