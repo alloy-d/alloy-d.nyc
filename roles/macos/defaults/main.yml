@@ -9,8 +9,10 @@ macos:
       - ansible
       - autojump
       - awscli
+      - bat
       - cowsay
       - elixir
+      - fd
       - fish
       - fortune
       - gpg2
