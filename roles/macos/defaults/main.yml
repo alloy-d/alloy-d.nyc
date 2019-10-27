@@ -9,8 +9,10 @@ macos:
       - ansible
       - autojump
       - awscli
+      - boot-clj
       - cowsay
       - elixir
+      - entr
       - fish
       - fortune
       - gpg2
@@ -27,6 +29,7 @@ macos:
       - macvim
       - pinentry-mac
       - postgresql
+      - telnet
       - terminal-notifier
       - terraform
       - tflint
@@ -37,6 +40,7 @@ macos:
     casks:
       - 1password
       - 1password-cli
+      - adoptopenjdk
       - alfred
       - aws-vault
       - dash
