@@ -41,3 +41,22 @@
     dest: "{{ item.dest }}"
     state: link
   loop: "{{ macos.dotfiles.links|flatten(levels=1) }}"
+
+- name: create gnupg directory
+  file:
+    mode: 0700
+    state: directory
+    path: ~/.gnupg
+
+- name: copy gnupg configs
+  copy:
+    mode: 0600
+    src: "~/.dotfiles.d/gnupg/{{ item }}"
+    remote_src: yes
+    dest: "~/.gnupg/{{ item }}"
+    force: no
+    follow: no
+    local_follow: no
+  loop:
+    - gpg.conf
+    - gpg-agent.conf
