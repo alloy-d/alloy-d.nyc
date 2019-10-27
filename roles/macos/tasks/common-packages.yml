@@ -11,8 +11,11 @@
 - name: brew upgrade
   homebrew: update_homebrew=yes upgrade_all=yes
 
+- name: brew install common casks
+  homebrew_cask: name={{ macos.brew.casks }} state=installed
+
 - name: brew install common packages
-  homebrew: name={{ macos.brew.packages }} state=upgraded
+  homebrew: name={{ macos.brew.packages }} state=installed
 
 - name: brew install common casks
   homebrew_cask: name={{ item }} state=installed
