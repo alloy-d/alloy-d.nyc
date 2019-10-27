@@ -17,6 +17,18 @@
 - name: brew install common packages
   homebrew: name={{ macos.brew.packages }} state=installed
 
-- name: brew install common casks
+- name: brew install personal packages
+  when: personal_machine
+  homebrew: name={{ item }} state=installed
+  loop:
+    - alot
+    - neomutt
+    - notmuch
+    - offlineimap
+    - w3m
+
+- name: brew install personal casks
+  when: personal_machine
   homebrew_cask: name={{ item }} state=installed
-  loop: "{{ macos.brew.casks | flatten(levels=1) }}"
+  loop:
+    - protonmail-bridge
