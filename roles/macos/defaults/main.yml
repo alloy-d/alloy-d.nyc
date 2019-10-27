@@ -24,6 +24,8 @@ macos:
       - lynx
       - neovim
       - nvm
+      - pass
+      - pass-otp
       - rbenv
       - reattach-to-user-namespace
       - ripgrep
