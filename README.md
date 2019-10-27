@@ -5,7 +5,8 @@ Miscellaneous things related to my existence in the physical world.
 
 ### Prerequisites
 
-- An SSH key added to GitHub, to clone this repo with read/write access.
+- An SSH key added to GitHub, to clone this repo (and the config repos
+	it depends on) with read/write access.
 
 ### Making it go
 
@@ -17,17 +18,6 @@ $ ./bootstrap-mac.sh
 ```
 
 ### Things this doesn't handle
-
-#### Transferring SSH and GPG keys.
-
-Depending on the use case, it probably makes the most sense to make
-a new SSH key on the new machine.
-
-For GPG, this works nicely:
-
-```sh
-$ gpg --export-secret-keys | ssh <NEW MACHINE> gpg --import
-```
 
 #### Setting my login shell
 
