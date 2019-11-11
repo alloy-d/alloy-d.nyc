@@ -89,3 +89,5 @@ macos:
         dest: ~/.pryrc
       - src: ripgrep/ripgreprc
         dest: ~/.ripgreprc
+      - src: tridactyl/tridactylrc
+        dest: ~/.tridactylrc
