@@ -20,7 +20,7 @@
         name=wheel
         state=present
         system=yes
-        
+
     - name: allow wheel to use sudo
       lineinfile: |
         dest=/etc/sudoers
@@ -39,14 +39,18 @@
 
     - name: set up a user account for Adam
       user: |
-        name=adam
+        name=awl
         shell=/bin/bash
         groups={{ (ansible_os_family == "Debian") | ternary("adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,netdev,input,spi,gpio,wheel", "wheel") }}
 
     - name: add an authorized key to adam
-      authorized_key: |
-        user=adam
-        key="{{ lookup('file', '/Users/adam/.ssh/id_ed25519.pub') }}"
+      authorized_key:
+        user: awl
+        key: "{{ item }}"
+        state: present
+        exclusive: True
+      with_files:
+        - public-keys/awl-gpg-auth.pub
 
     - name: set the hostname
       hostname: name="{{ inventory_hostname }}"
