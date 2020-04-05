@@ -1,0 +1,22 @@
+---
+arch:
+  dotfiles:
+    links:
+      - src: tmux/tmux.conf
+        dest: ~/.tmux.conf
+      - src: editorconfig
+        dest: ~/.editorconfig
+      - src: fish
+        dest: ~/.config/fish
+      - src: git/gitconfig
+        dest: ~/.gitconfig
+      - src: git/gitignore
+        dest: ~/.gitignore
+      - src: nvim
+        dest: ~/.config/nvim
+      - src: kitty
+        dest: ~/.config/kitty
+      - src: pry/pryrc
+        dest: ~/.pryrc
+      - src: ripgrep/ripgreprc
+        dest: ~/.ripgreprc

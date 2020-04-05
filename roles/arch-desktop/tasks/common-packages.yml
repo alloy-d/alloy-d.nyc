@@ -1,0 +1,13 @@
+---
+- name: install common packages
+  pacman:
+    name:
+      - bat
+      - fish
+      - git
+      - kitty
+      - neovim
+      - pass
+      - pass-otp
+      - ripgrep
+      - tmux
