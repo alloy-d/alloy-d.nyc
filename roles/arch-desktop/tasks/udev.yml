@@ -1,0 +1,17 @@
+---
+- name: install udev rules for keyboard bootloaders
+  copy:
+    src: etc/udev/rules.d/
+    dest: /etc/udev/rules.d/
+    owner: root
+    group: root
+    mode: 0644
+  register: udev_rules
+
+- name: reload udev rules
+  command: udevadm control --reload-rules
+  when: udev_rules is changed
+
+- name: trigger udev rules
+  command: udevadm trigger
+  when: udev_rules is changed
