@@ -6,4 +6,4 @@ if ! which ansible-playbook; then
 	sudo pacman -S ansible
 fi
 
-ansible-playbook -K arch.yml
+ansible-playbook -v -K arch.yml
