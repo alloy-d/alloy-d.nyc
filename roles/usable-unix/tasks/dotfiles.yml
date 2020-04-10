@@ -35,7 +35,7 @@
     src: "~/.dotfiles.d/{{ item.src }}"
     dest: "{{ item.dest }}"
     state: link
-  loop: "{{ arch.dotfiles.links|flatten(levels=1) }}"
+  loop: "{{ dotfiles.links|flatten(levels=1) }}"
 
 - name: create gnupg directory
   file:
@@ -54,4 +54,4 @@
     local_follow: no
   loop:
     - gpg.conf
-    #- gpg-agent.conf
+    - gpg-agent.conf
