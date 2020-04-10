@@ -18,6 +18,7 @@ macos:
       - fish
       - fortune
       - gpg2
+      - hub
       - jq
       - kops
       - kubectl
@@ -52,6 +53,7 @@ macos:
       - fantastical
       - firefox
       - font-fira-code
+      - font-ibm-plex
       - font-meslo-for-powerline
       - font-meslo-lg
       - front

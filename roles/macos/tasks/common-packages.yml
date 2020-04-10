@@ -5,11 +5,18 @@
     state: present
   loop: "{{ macos.brew.taps | flatten(levels=1) }}"
 
+- name: warn if skipping updates
+  debug:
+    msg: not updating brew and upgrading packages; run with BREW_UPGRADE=true
+  when: lookup('env', 'BREW_UPGRADE') | bool is false
+
 - name: brew update
   homebrew: update_homebrew=yes
+  when: lookup('env', 'BREW_UPGRADE') | bool
 
 - name: brew upgrade
   homebrew: update_homebrew=yes upgrade_all=yes
+  when: lookup('env', 'BREW_UPGRADE') | bool
 
 - name: brew install common casks
   homebrew_cask: name={{ macos.brew.casks }} state=installed
