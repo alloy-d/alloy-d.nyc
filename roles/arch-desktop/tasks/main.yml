@@ -1,6 +1,3 @@
 ---
-- include: common-packages.yml
-  become: true
-
 - include: udev.yml
   become: true
